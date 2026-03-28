@@ -16,7 +16,7 @@ const priceCategories = [
     items: [
       { name: "Ansatzfarbe", price: "ab 45 €" },
       { name: "Farbe", price: "ab 55 €" },
-      { name: "Foliensträhnen", price: "+ 35 € auf normales Färben" },
+      { name: "Foliensträhnen", price: "ab 35 €" },
       { name: "Balayage / Ombré", price: "ab 95 €" },
       { name: "Glossing / Tönung", price: "ab 30 €" },
     ],
