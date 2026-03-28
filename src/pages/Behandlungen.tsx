@@ -31,7 +31,6 @@ const treatments = [
     items: [
       "Intensivkur mit Einwirkzeit",
       "Olaplex-Behandlung",
-      "Keratin-Glättung",
       "Kopfhautbehandlung",
       "Haarkur mit Dampf",
     ],
@@ -40,9 +39,9 @@ const treatments = [
     icon: Droplets,
     title: "Extras",
     items: [
+      "Nagelleistungen",
       "Augenbrauen zupfen & färben",
       "Wimpern färben",
-      "Bartpflege & Trimm",
       "Beratungstermin (kostenlos)",
     ],
   },
@@ -57,7 +56,7 @@ const Behandlungen = () => (
             Unsere Leistungen
           </motion.p>
           <motion.h1 variants={fadeUp} custom={1} className="font-display text-4xl md:text-5xl font-semibold text-foreground">
-            Behandlungen
+            Leistungen
           </motion.h1>
         </motion.div>
 

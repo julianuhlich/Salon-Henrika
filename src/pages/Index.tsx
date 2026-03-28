@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp } from "@/lib/animations";
-import heroImage from "@/assets/hero-salon.jpg";
-import treatmentImage from "@/assets/treatment-hair.jpg";
+import heroImage from "@/assets/Hero_googel.png";
+import treatmentImage from "@/assets/Pinterrest.jpeg";
 
 const Index = () => {
   return (
@@ -13,7 +13,7 @@ const Index = () => {
       <section className="relative h-[85vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <img
           src={heroImage}
-          alt="Salon Élégance Interieur"
+          alt="Salon Henrika Interieur"
           className="absolute inset-0 w-full h-full object-cover"
           width={1920}
           height={1080}
@@ -26,8 +26,8 @@ const Index = () => {
             transition={{ duration: 0.9 }}
             className="font-display text-4xl md:text-6xl lg:text-7xl font-semibold text-primary-foreground mb-4 tracking-tight"
           >
-            Dein Stil. <br className="md:hidden" />
-            <span className="italic">Dein Moment.</span>
+            Ihr Stil. <br className="md:hidden" />
+            <span className="italic">Ihr Moment.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -64,13 +64,13 @@ const Index = () => {
               Unsere Leistungen
             </motion.p>
             <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl md:text-4xl font-semibold text-foreground">
-              Was wir für dich tun
+              Was wir für Sie tun
             </motion.h2>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "Schnitt & Styling", desc: "Präzise Schnitte, die deinen Look perfekt unterstreichen." },
+              { title: "Schnitt & Styling", desc: "Präzise Schnitte, die Ihren Look perfekt unterstreichen." },
               { title: "Farbe & Highlights", desc: "Von natürlichen Nuancen bis hin zu mutigen Statements." },
               { title: "Pflege & Wellness", desc: "Verwöhnprogramme für gesundes, glänzendes Haar." },
             ].map((service, i) => (
@@ -94,8 +94,8 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <Button asChild variant="outline" className="font-body">
-              <Link to="/behandlungen">
-                Alle Behandlungen <ArrowRight className="ml-2 w-4 h-4" />
+              <Link to="/leistungen">
+                Alle Leistungen <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </Button>
           </div>
@@ -131,10 +131,10 @@ const Index = () => {
             >
               <p className="text-sm uppercase tracking-[0.2em] text-primary font-body mb-3">Warum zu uns?</p>
               <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-6">
-                Weil du es verdienst, dich schön zu fühlen
+                Weil Sie es verdienen, sich schön zu fühlen
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed mb-6">
-                In unserem Salon erwartet dich eine entspannte Atmosphäre, individuelle Beratung 
+                In unserem Salon erwartet Sie eine entspannte Atmosphäre, individuelle Beratung 
                 und handwerkliches Können auf höchstem Niveau. Jeder Besuch ist ein kleines Erlebnis.
               </p>
               <Button asChild className="bg-gold-gradient text-primary-foreground font-body">

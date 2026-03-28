@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import { MapPin, Phone, Clock, ArrowRight } from "lucide-react";
 import { fadeUp } from "@/lib/animations";
+import { Button } from "@/components/ui/button";
 
 const contactInfo = [
-  { icon: MapPin, label: "Adresse", value: "Musterstraße 12, 80331 München" },
-  { icon: Phone, label: "Telefon", value: "+49 89 123 456 78" },
-  { icon: Mail, label: "E-Mail", value: "hallo@salon-elegance.de" },
-  { icon: Clock, label: "Öffnungszeiten", value: "Di–Fr: 9–18 Uhr | Sa: 9–14 Uhr" },
+  { icon: MapPin, label: "Adresse", value: "Brückenstraße 2, 09322 Penig" },
+  { icon: Phone, label: "Telefon", value: "03738 1661620" },
+  { icon: Clock, label: "Öffnungszeiten", value: "Montag geschlossen | Dienstag bis Freitag 8–21 Uhr" },
+  { icon: Clock, label: "Hinweis", value: "Abweichende Arbeitszeiten je nach Terminvereinbarung" },
 ];
 
 const Kontakt = () => (
@@ -15,7 +16,7 @@ const Kontakt = () => (
       <div className="container max-w-3xl">
         <motion.div initial="hidden" animate="visible" className="text-center mb-16">
           <motion.p variants={fadeUp} custom={0} className="text-sm uppercase tracking-[0.2em] text-primary font-body mb-3">
-            Wir freuen uns auf dich
+            Wir freuen uns auf Sie
           </motion.p>
           <motion.h1 variants={fadeUp} custom={1} className="font-display text-4xl md:text-5xl font-semibold text-foreground">
             Kontakt
@@ -50,18 +51,24 @@ const Kontakt = () => (
           viewport={{ once: true }}
           variants={fadeUp}
           custom={0}
-          className="rounded-lg overflow-hidden shadow-elevated"
+          className="rounded-lg bg-card p-8 shadow-elevated text-center"
         >
-          <iframe
-            title="Standort Salon Élégance"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.531!2d11.5761!3d48.1351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDA4JzA2LjQiTiAxMcKwMzQnMzQuMCJF!5e0!3m2!1sde!2sde!4v1"
-            width="100%"
-            height="350"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          <p className="font-display text-2xl font-semibold text-foreground mb-3">
+            So finden Sie uns
+          </p>
+          <p className="font-body text-sm text-muted-foreground mb-6">
+            Für einen datenschutzfreundlichen Auftritt laden wir keine eingebettete Karte direkt auf der Website.
+            Den Standort können Sie bei Bedarf mit einem Klick in Ihrem Kartendienst öffnen.
+          </p>
+          <Button asChild className="bg-gold-gradient text-primary-foreground font-body tracking-wide">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Br%C3%BCckenstra%C3%9Fe+2%2C+09322+Penig"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Route in Google Maps öffnen <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
         </motion.div>
       </div>
     </section>

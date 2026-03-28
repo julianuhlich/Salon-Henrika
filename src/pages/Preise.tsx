@@ -6,9 +6,8 @@ const priceCategories = [
     title: "Schnitt & Styling",
     items: [
       { name: "Damenhaarschnitt (Waschen, Schneiden, Föhnen)", price: "ab 55 €" },
-      { name: "Herrenhaarschnitt", price: "ab 30 €" },
-      { name: "Kinderhaarschnitt (bis 12 J.)", price: "ab 20 €" },
-      { name: "Pony nachschneiden", price: "10 €" },
+      { name: "Herrenhaarschnitt (Waschen, Schneiden, Stylen)", price: "ab 32 €" },
+      { name: "Kinderhaarschnitt (bis 12 J.)", price: "ab 22 €" },
       { name: "Hochsteckfrisur / Eventfrisur", price: "ab 65 €" },
     ],
   },
@@ -16,8 +15,8 @@ const priceCategories = [
     title: "Farbe & Strähnchen",
     items: [
       { name: "Ansatzfarbe", price: "ab 45 €" },
-      { name: "Komplettfärbung", price: "ab 65 €" },
-      { name: "Foliensträhnen", price: "ab 70 €" },
+      { name: "Farbe", price: "ab 55 €" },
+      { name: "Foliensträhnen", price: "+ 35 € auf normales Färben" },
       { name: "Balayage / Ombré", price: "ab 95 €" },
       { name: "Glossing / Tönung", price: "ab 30 €" },
     ],
@@ -26,10 +25,8 @@ const priceCategories = [
     title: "Pflege & Extras",
     items: [
       { name: "Intensivkur", price: "ab 15 €" },
-      { name: "Olaplex-Behandlung", price: "ab 25 €" },
-      { name: "Keratin-Glättung", price: "ab 120 €" },
-      { name: "Augenbrauen zupfen & färben", price: "15 €" },
-      { name: "Wimpern färben", price: "12 €" },
+      { name: "Augenbrauen zupfen mit Farbe", price: "18 €" },
+      { name: "Wimpern färben", price: "9 €" },
     ],
   },
 ];
