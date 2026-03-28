@@ -1,13 +1,6 @@
 import { motion } from "framer-motion";
+import { fadeUp } from "@/lib/animations";
 import aboutImage from "@/assets/about-portrait.jpg";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1, y: 0,
-    transition: { delay: i * 0.15, duration: 0.7, ease: "easeOut" },
-  }),
-};
 
 const UeberMich = () => (
   <div>

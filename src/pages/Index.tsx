@@ -2,17 +2,9 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { fadeUp } from "@/lib/animations";
 import heroImage from "@/assets/hero-salon.jpg";
 import treatmentImage from "@/assets/treatment-hair.jpg";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.15, duration: 0.7, ease: "easeOut" },
-  }),
-};
 
 const Index = () => {
   return (
