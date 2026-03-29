@@ -10,7 +10,6 @@ const treatments = [
       "Damenhaarschnitt – Waschen, Schneiden, Föhnen",
       "Herrenhaarschnitt – Waschen, Schneiden, Styling",
       "Kinderhaarschnitt (bis 12 Jahre)",
-      "Pony nachschneiden",
       "Hochsteckfrisur / Eventfrisur",
     ],
   },
@@ -40,6 +39,8 @@ const treatments = [
     title: "Extras",
     items: [
       "Nagelleistungen",
+      "Nageldesign",
+      "Maniküre",
       "Augenbrauen zupfen & färben",
       "Wimpern färben",
       "Beratungstermin (kostenlos)",

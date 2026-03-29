@@ -29,6 +29,16 @@ const priceCategories = [
       { name: "Wimpern färben", price: "9 €" },
     ],
   },
+  {
+    title: "Nagelleistungen",
+    items: [
+      { name: "Neumodellage", price: "60 €" },
+      { name: "Auffüllen nach 4 Wochen", price: "45 €" },
+      { name: "Auffüllen nach 3 Wochen", price: "43 €" },
+      { name: "Maniküre", price: "ab 25 €" },
+
+    ],
+  },
 ];
 
 const Preise = () => (
