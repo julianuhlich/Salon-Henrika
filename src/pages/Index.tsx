@@ -3,12 +3,46 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { fadeUp } from "@/lib/animations";
+import Seo from "@/components/Seo";
 import heroImage from "@/assets/Hero_googel.png";
 import treatmentImage from "@/assets/Pinterrest.jpeg";
 
 const Index = () => {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    name: "Salon Henrika",
+    description: "Friseursalon in Penig mit persönlicher Beratung, modernen Haarschnitten, Farbe und Pflege.",
+    url: typeof window !== "undefined" ? `${window.location.origin}/` : "/",
+    telephone: "+49 3738 1661620",
+    priceRange: "EUR EUR",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Brückenstraße 2",
+      postalCode: "09322",
+      addressLocality: "Penig",
+      addressCountry: "DE",
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "21:00",
+      },
+    ],
+  };
+
   return (
     <div>
+      <Seo
+        title="Friseur in Penig | Salon Henrika"
+        description="Salon Henrika ist Ihr Friseur in Penig für Haarschnitte, Farbe, Styling und persönliche Beratung. Jetzt Termin anfragen."
+        keywords="Friseur Penig, Friseursalon Penig, Damenfriseur Penig, Herrenfriseur Penig, Salon Henrika"
+        path="/"
+        jsonLd={localBusinessSchema}
+      />
+
       {/* Hero */}
       <section className="relative h-[85vh] min-h-[500px] flex items-center justify-center overflow-hidden">
         <img
@@ -35,7 +69,7 @@ const Index = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="font-body text-lg md:text-xl text-primary-foreground/80 max-w-md mx-auto mb-8"
           >
-            Persönliche Beratung, meisterhafte Schnitte und ein Hauch von Luxus.
+            Ihr Friseur in Penig für persönliche Beratung, meisterhafte Schnitte und gepflegtes Styling.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -134,8 +168,9 @@ const Index = () => {
                 Weil Sie es verdienen, sich schön zu fühlen
               </h2>
               <p className="font-body text-muted-foreground leading-relaxed mb-6">
-                In unserem Salon erwartet Sie eine entspannte Atmosphäre, individuelle Beratung 
-                und handwerkliches Können auf höchstem Niveau. Jeder Besuch ist ein kleines Erlebnis.
+                Im Salon Henrika in Penig erwartet Sie eine entspannte Atmosphäre, individuelle Beratung
+                und handwerkliches Können mit Blick für Ihren persönlichen Stil. Ob frischer Schnitt,
+                neue Farbe oder gepflegtes Finish: Wir nehmen uns Zeit für Ergebnisse, die zu Ihnen passen.
               </p>
               <Button asChild className="bg-gold-gradient text-primary-foreground font-body">
                 <Link to="/ueber-mich">Mehr über mich</Link>

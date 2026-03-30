@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Phone, Clock, ArrowRight } from "lucide-react";
 import { fadeUp } from "@/lib/animations";
+import Seo from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 
 const contactInfo = [
@@ -12,6 +13,13 @@ const contactInfo = [
 
 const Kontakt = () => (
   <div>
+    <Seo
+      title="Kontakt zum Friseur in Penig | Salon Henrika"
+      description="Kontaktieren Sie Salon Henrika, Ihren Friseur in Penig. Adresse, Telefon, Öffnungszeiten und Route auf einen Blick."
+      keywords="Kontakt Friseur Penig, Friseur Penig Adresse, Salon Henrika Penig"
+      path="/kontakt"
+    />
+
     <section className="py-20 md:py-28">
       <div className="container max-w-3xl">
         <motion.div initial="hidden" animate="visible" className="text-center mb-16">
@@ -19,8 +27,16 @@ const Kontakt = () => (
             Wir freuen uns auf Sie
           </motion.p>
           <motion.h1 variants={fadeUp} custom={1} className="font-display text-4xl md:text-5xl font-semibold text-foreground">
-            Kontakt
+            Kontakt zu Ihrem Friseur in Penig
           </motion.h1>
+          <motion.p
+            variants={fadeUp}
+            custom={2}
+            className="font-body text-muted-foreground leading-relaxed mt-6 max-w-2xl mx-auto"
+          >
+            Sie möchten einen Termin vereinbaren oder haben Fragen zu Leistungen, Preisen oder verfügbaren Zeiten?
+            Hier finden Sie alle Kontaktdaten vom Salon Henrika in Penig auf einen Blick.
+          </motion.p>
         </motion.div>
 
         <div className="grid sm:grid-cols-2 gap-6 mb-12">
@@ -57,6 +73,7 @@ const Kontakt = () => (
             So finden Sie uns
           </p>
           <p className="font-body text-sm text-muted-foreground mb-6">
+            Unser Friseursalon befindet sich in der Brückenstraße 2 in 09322 Penig.
             Für einen datenschutzfreundlichen Auftritt laden wir keine eingebettete Karte direkt auf der Website.
             Den Standort können Sie bei Bedarf mit einem Klick in Ihrem Kartendienst öffnen.
           </p>
