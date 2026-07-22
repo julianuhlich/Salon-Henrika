@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ponytail: handgepflegt. Bei neuer Route hier eine Zeile ergaenzen.
+     Generator lohnt erst, wenn die Routen dynamisch werden. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://salon-henrika.de/</loc></url>
+  <url><loc>https://salon-henrika.de/leistungen</loc></url>
+  <url><loc>https://salon-henrika.de/preise</loc></url>
+  <url><loc>https://salon-henrika.de/ueber-mich</loc></url>
+  <url><loc>https://salon-henrika.de/kontakt</loc></url>
+  <url><loc>https://salon-henrika.de/impressum</loc></url>
+  <url><loc>https://salon-henrika.de/datenschutz</loc></url>
+</urlset>
