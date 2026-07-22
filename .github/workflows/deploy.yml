@@ -1,0 +1,39 @@
+name: Deploy to Hetzner
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Build
+        run: |
+          npm ci
+          npm run build
+          mv dist public_html
+          cp .htaccess public_html
+
+      # ponytail: laedt hoch, raeumt aber nichts weg. Alte Assets bleiben liegen
+      # (harmlos, Vite hasht die Dateinamen). Bei Bedarf remote vorher leeren.
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 22
+          local_path: './public_html'
+          remote_path: '/'
+          sftp_only: true
